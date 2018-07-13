@@ -54,3 +54,10 @@ dkms.conf
 # Vim swap files
 *.swp
 .swp
+
+# Latex compilation files
+*.aux
+*.log
+*.pdf
+*.toc
+
