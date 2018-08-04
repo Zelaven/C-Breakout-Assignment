@@ -24,7 +24,7 @@ test:
 	echo $(ODIR)/Breakout.o
 
 Breakout: $(OBJ)
-	$(CC) -o Breakout $^ $(CFLAGS)
+	$(CC) -o Breakout.out $^ $(CFLAGS)
 
 $(ODIR)/%.o: $(SDIR)/%.c $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
