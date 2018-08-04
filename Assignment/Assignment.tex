@@ -31,7 +31,7 @@ The assignment is compartmentalized, such that is a given part is troublesome, o
 \\
 The assignment is set up such that I, the author, think that the difficulty progression is ideal, after having taken dependencies within the project into account, and doing the tasks in a linear fashion as of this document is at a bare minimum workable.\\
 \\
-There are two kinds of tasks. The "mandatory" tasks, which means that without completing them you haven't made a breakout game or are lacking underlying framework that the game needs to function, and the optional tasks, which are additional features that can be added into the game, such as powerups, sound or keeping levels stored in files.\\
+There are two kinds of tasks. The core tasks, which means that without completing them you haven't made a breakout game or are lacking underlying framework that the game needs to function, and the optional tasks, which are additional features that can be added into the game, such as powerups, sound or keeping levels stored in files.\\
 \\
 Other than that, simply continue reading this document. After you finish reading about the first task and you should be ready to start working on it.\\
 As a final note, it is only recommended to look in the Example folder if you are completely stuck and you already have asked people about your problem. It's much better to learn from experimentation and talking with people than to just look at the solution to a problem, and you can always look at how it is solved in the example after you can solved it yourself! That way you get the best of both worlds.\\
@@ -42,7 +42,18 @@ I hope you will have a good time with this assignment. Thank your for spending y
 \section{Breakout}
 If you don't know what breakout is, then simply use a search engine to look it up. It is likely that you will be able to find a browser-runnable implementation of it that you can play to get a feel for the game.
 
-\section{}
+\section{The Skeleton}
+The skeleton code consists of a collection of source code files and header files. The Breakout.c file contains the core game and it relies on all the other files. It has been set up such that it shouldn't require much modifications for the core tasks.
+ If you become unsure regarding how to solve a problem for the core tasks, then modifying the breakout.c file is unlikely to be the solution. Furthermore, don't modify the breakout.h file unless you know what you're doing.\\
+The rest of the source code files are for different components of the game. They have corresponding header files in the include folder that expose their interfaces. You can add more functions and data types to the source code file without losing compatibility with the contents of the example implementation as long as the header files are unmodified such that the interface is the same.
+
+\section{Renderer}
+The renderer is the component that gets things to show up on the screen. You will be reading a lot on the SDL website on this one as this is where it manifests to the greatest extent.\\
+It will be doing three things. The first is drawing the background, the second is to draw an arbitrary graphic on the screen and the last is to update the game window to show the changes.\\
+This component is being built first because it gets things to show up visually, which is useful for debugging the rest of the game.\\
+Making the renderer draw pictures isn't really necessary. It is enough to have drawing the background blacken out the screen and the graphic drawing draw a non-black rectangle. You can check against the picture being NULL if you want to support both.\\
+This task is a bit tricky to get quite right because it requires library understanding, so if it poses too many problems you should consider looking at the example implementation. Don't copy-paste, though. Read the example code where you are stuck and try to replicate the ideas on your own for the greatest learning output.
+
 
 
 
